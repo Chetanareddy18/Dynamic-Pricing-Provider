@@ -8,6 +8,7 @@ This project demonstrates dynamic state management, external JSON-based data han
 
 ---
 
+![Dashboard Preview](screenshot.png)
 # Assignment Requirements Mapping
 
 ## Functional Requirements
@@ -60,7 +61,7 @@ All functional requirements have been fully implemented.
 Dynamic-Pricing-Provider/
 
 ├── public/  
-│   ├── screenshot.png.png  
+│   ├── screenshot.png
 │   └── vite.svg  
 
 ├── src/  
