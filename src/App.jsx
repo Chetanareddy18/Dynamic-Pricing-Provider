@@ -19,6 +19,16 @@ function App() {
         </div>
 
         <PricingGrid />
+
+        {/* NEW SECTION BELOW */}
+        <div className="cta-section">
+          <h2>Start Your Free Trial Today</h2>
+          <p>No credit card required. Cancel anytime.</p>
+          <button className="cta-button">
+            Start Free Trial
+          </button>
+        </div>
+
       </div>
     </PricingProvider>
   );
