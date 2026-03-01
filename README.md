@@ -1,4 +1,4 @@
-# Dynamic Pricing Dashboard
+<h1 align="center">Dynamic Pricing Dashboard</h1>
 
 ## Frontend Internship Assignment Submission
 
