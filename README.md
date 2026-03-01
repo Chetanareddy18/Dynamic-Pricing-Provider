@@ -1,16 +1,116 @@
-# React + Vite
+# Dynamic Pricing Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+A responsive subscription pricing dashboard built using React and Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates dynamic UI updates, state management using Context API, currency conversion, and clean component architecture.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Three subscription plans: Basic, Standard, Premium  
+- Monthly and Yearly billing toggle  
+- Automatic yearly discount calculation  
+- Currency selector (USD / INR)  
+- Highlighted Recommended plan  
+- Pricing data loaded from external JSON  
+- Dynamic UI updates when billing or currency changes  
+- Fully responsive design (Mobile / Tablet / Desktop)  
+- Clean component structure  
+- Basic accessibility support  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- React  
+- Vite  
+- Context API  
+- Custom CSS  
+- JSON (Mock API data source)  
+
+---
+
+## Architecture & Design Decisions
+
+### 1. Context API for Global State
+
+- Used React Context to manage billing type and currency  
+- Avoided prop drilling  
+- Centralized pricing logic  
+
+### 2. External JSON Data
+
+- Pricing plans and currency rates stored in pricing.json  
+- Simulates mock API behavior  
+- Makes UI automatically update when data changes  
+
+### 3. Memoized Price Calculation
+
+- Used useMemo to optimize price computation  
+- Prevents unnecessary recalculations on re-renders  
+
+### 4. Component Structure
+
+- PricingProvider – Global state management  
+- PricingGrid – Plan layout  
+- PlanCard – Individual plan display  
+
+Each component follows single responsibility principle.
+
+---
+
+## Pricing Logic
+
+- Monthly price shown as base price  
+- Yearly price = monthlyPrice × 12 × (1 - discount)  
+- Currency conversion applied dynamically using currencyRates  
+- Discount applied: 20%  
+
+---
+
+## Responsiveness
+
+- CSS Grid layout for plan alignment  
+- Adaptive layout for tablet and mobile  
+- Center-aligned headings and controls  
+- Flexible card sizing  
+
+---
+
+## Folder Structure
+
+src/
+├── components/
+├── context/
+├── data/
+├── App.jsx
+└── main.jsx
+
+---
+
+## How to Run Locally
+
+npm install  
+npm run dev  
+
+Then open:  
+http://localhost:5173  
+
+---
+
+## Future Improvements
+
+- Connect to real backend API  
+- Add animation transitions  
+- Add theme switcher (Light/Dark mode)  
+- Add unit testing  
+- Add TypeScript support  
+
+---
+
+## Author
+
+Developed as part of a Frontend Internship Assignment.
