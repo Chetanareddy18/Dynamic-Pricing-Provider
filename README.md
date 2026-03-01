@@ -1,116 +1,186 @@
 # Dynamic Pricing Dashboard
 
-## Overview
+## Frontend Internship Assignment Submission
 
-A responsive subscription pricing dashboard built using React and Vite.
+A responsive pricing and subscription dashboard built using React and Vite.
 
-This project demonstrates dynamic UI updates, state management using Context API, currency conversion, and clean component architecture.
-
----
-
-## Features
-
-- Three subscription plans: Basic, Standard, Premium  
-- Monthly and Yearly billing toggle  
-- Automatic yearly discount calculation  
-- Currency selector (USD / INR)  
-- Highlighted Recommended plan  
-- Pricing data loaded from external JSON  
-- Dynamic UI updates when billing or currency changes  
-- Fully responsive design (Mobile / Tablet / Desktop)  
-- Clean component structure  
-- Basic accessibility support  
+This project demonstrates dynamic state management, external JSON-based data handling, billing logic abstraction, currency conversion, and clean modular component architecture.
 
 ---
 
-## Tech Stack
+# Assignment Requirements Mapping
 
-- React  
-- Vite  
-- Context API  
-- Custom CSS  
-- JSON (Mock API data source)  
+## Functional Requirements
+
+' Three subscription plans: Basic, Standard, Premium  
+' Each plan displays:  
+' Price  
+' Billing period  
+' Minimum four features  
+' Monthly / Yearly billing toggle  
+' Yearly pricing includes automatic discount calculation  
+' Currency selector (USD / INR)  
+' One plan visually highlighted as Recommended  
+
+All functional requirements have been fully implemented.
 
 ---
 
-## Architecture & Design Decisions
+## Data Requirements
 
-### 1. Context API for Global State
+' Pricing data loaded from external JSON file (pricing.json)  
+' JSON acts as mock API source  
+' UI updates dynamically when billing type or currency changes  
+' No hardcoded pricing inside UI components  
 
-- Used React Context to manage billing type and currency  
-- Avoided prop drilling  
-- Centralized pricing logic  
+---
 
-### 2. External JSON Data
+## Non-Functional Requirements
 
-- Pricing plans and currency rates stored in pricing.json  
-- Simulates mock API behavior  
-- Makes UI automatically update when data changes  
+' Fully responsive layout (Mobile / Tablet / Desktop)  
+' Clean and modular component structure  
+' Global state management using Context API  
+' Basic accessibility support  
+' Maintainable folder architecture  
 
-### 3. Memoized Price Calculation
+---
 
-- Used useMemo to optimize price computation  
-- Prevents unnecessary recalculations on re-renders  
+# Tech Stack
 
-### 4. Component Structure
+' React (Functional Components + Hooks)  
+' Vite  
+' Context API  
+' Custom CSS  
+' External JSON (Mock API Simulation)  
 
-- PricingProvider – Global state management  
-- PricingGrid – Plan layout  
-- PlanCard – Individual plan display  
+---
 
-Each component follows single responsibility principle.
+# Project Structure
+
+Dynamic-Pricing-Provider/
+
+├── public/  
+│   ├── screenshot.png.png  
+│   └── vite.svg  
+
+├── src/  
+│   ├── assets/  
+│  
+│   ├── components/  
+│   │   ├── BillingToggle.jsx  
+│   │   ├── CurrencySelector.jsx  
+│   │   ├── PlanCard.jsx  
+│   │   └── PricingGrid.jsx  
+│  
+│   ├── context/  
+│   │   └── PricingContext.jsx  
+│  
+│   ├── data/  
+│   │   └── pricing.json  
+│  
+│   ├── App.css  
+│   ├── App.jsx  
+│   ├── index.css  
+│   └── main.jsx  
+
+├── index.html  
+├── package.json  
+├── vite.config.js  
+├── eslint.config.js  
+└── README.md  
+
+---
+
+# Architecture & Design Decisions
+
+## Global State with Context API
+
+' Billing type and currency selection managed globally  
+' Avoids prop drilling  
+' Centralized pricing logic  
+' Ensures synchronized UI updates  
+
+Trade-off: For large-scale apps, Redux or Zustand may scale better.
+
+---
+
+## External JSON as Data Source
+
+' Plan details and currency rates stored in pricing.json  
+' Separates UI from data  
+' Easily extendable to real backend API  
+
+Trade-off: Currently synchronous (no async API simulation).
 
 ---
 
 ## Pricing Logic
 
-- Monthly price shown as base price  
-- Yearly price = monthlyPrice × 12 × (1 - discount)  
-- Currency conversion applied dynamically using currencyRates  
-- Discount applied: 20%  
+' yearlyPrice = monthlyPrice × 12 × (1 - discount)  
+' Currency conversion applied dynamically  
+' Discount applied only on yearly billing  
 
 ---
 
-## Responsiveness
+## Component Design
 
-- CSS Grid layout for plan alignment  
-- Adaptive layout for tablet and mobile  
-- Center-aligned headings and controls  
-- Flexible card sizing  
+' PricingContext – Global state provider  
+' PricingGrid – Layout wrapper  
+' PlanCard – Individual plan display  
+' BillingToggle – Billing mode switch  
+' CurrencySelector – Currency dropdown selector  
 
----
-
-## Folder Structure
-
-src/
-├── components/
-├── context/
-├── data/
-├── App.jsx
-└── main.jsx
+Each component follows Single Responsibility Principle.
 
 ---
 
-## How to Run Locally
+# Responsiveness
+
+' CSS Grid layout  
+' Flexible card sizing  
+' Media queries for smaller devices  
+' Center-aligned headings and controls  
+
+---
+
+# Accessibility
+
+' Semantic HTML structure  
+' Keyboard accessible controls  
+' Proper button roles  
+' Clear visual hierarchy  
+
+---
+
+# How to Run Locally
+
+1. Clone the repository  
+2. Run:
 
 npm install  
+
+3. Start development server:
+
 npm run dev  
 
-Then open:  
+4. Open browser:
+
 http://localhost:5173  
 
 ---
 
-## Future Improvements
+# Future Improvements
 
-- Connect to real backend API  
-- Add animation transitions  
-- Add theme switcher (Light/Dark mode)  
-- Add unit testing  
-- Add TypeScript support  
+' Connect to real backend API  
+' Add animations and transitions  
+' Add unit testing  
+' Convert to TypeScript  
+' Add Dark/Light theme toggle  
 
 ---
 
+
 ## Author
 
-Developed as part of a Frontend Internship Assignment.
+Developed by Palla Chetana Reddy 
+Dynamic Pricing Dashboard – 2026  
