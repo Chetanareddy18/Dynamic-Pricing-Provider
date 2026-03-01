@@ -1,0 +1,223 @@
+:root {
+  --accent: #0f766e;
+  --accent-soft: #ecfdf5;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f9fafb);
+  color: var(--text-main);
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+/* Heading (CENTERED FIX) */
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin: 0 auto 16px auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0 auto 70px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+/* Billing Toggle */
+.billing-toggle {
+  display: inline-flex;
+  background: #f3f4f6;
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.billing-toggle button {
+  border: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  transition: 0.25s ease;
+}
+
+.billing-toggle .active {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* Currency Select */
+.currency-select {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1.5px solid #d1d5db;
+  background: #ffffff;
+  color: var(--text-main);
+  font-weight: 500;
+  outline: none;
+  transition: 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.currency-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  justify-items: center;
+}
+
+/* Cards */
+.card {
+  width: 300px;
+  min-height: 540px;
+  padding: 50px 35px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* Recommended */
+.recommended {
+  border: 1.5px solid var(--accent);
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+}
+
+/* Badge */
+.badge {
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 28px;
+  display: inline-block;
+}
+
+/* Price */
+.price {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 30px 0 10px 0;
+  letter-spacing: -1px;
+}
+
+/* Save Text */
+.save {
+  color: #059669;
+  font-size: 0.85rem;
+}
+
+/* Features */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  text-align: left;
+  flex-grow: 1;
+}
+
+/* FEATURE ITEMS */
+.card li {
+  margin-bottom: 14px;
+  color: #424245;
+  position: relative;
+  padding-left: 26px;
+  transition: all 0.25s ease;
+  border-radius: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+
+
+/* HOVER HIGHLIGHT EFFECT */
+.card li:hover {
+  background: var(--accent-soft);
+  transform: translateX(6px);
+}
+
+/* Button */
+.card button {
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: #111111;
+  color: #ffffff;
+  transition: 0.25s ease;
+}
+
+.card button:hover {
+  background: #333333;
+}
+
+.recommended button {
+  background: var(--accent);
+}
+
+.recommended button:hover {
+  background: #0b5f58;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

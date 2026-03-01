@@ -1,0 +1,41 @@
+{
+  "currencyRates": {
+    "USD": 1,
+    "INR": 83
+  },
+  "plans": [
+    {
+      "name": "Basic",
+      "monthlyPrice": 10,
+      "features": [
+        "Essential tools",
+        "Email support",
+        "1 GB secure storage",
+        "Community access"
+      ],
+      "recommended": false
+    },
+    {
+      "name": "Standard",
+      "monthlyPrice": 20,
+      "features": [
+        "All Basic features",
+        "Priority support",
+        "10 GB storage",
+        "Advanced analytics"
+      ],
+      "recommended": true
+    },
+    {
+      "name": "Premium",
+      "monthlyPrice": 35,
+      "features": [
+        "All Standard features",
+        "24/7 dedicated support",
+        "Unlimited cloud storage",
+        "Custom integrations & API access"
+      ],
+      "recommended": false
+    }
+  ]
+}
