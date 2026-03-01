@@ -5,10 +5,8 @@
 A responsive pricing and subscription dashboard built using React and Vite.
 
 This project demonstrates dynamic state management, external JSON-based data handling, billing logic abstraction, currency conversion, and clean modular component architecture.
-
+![Dashboard Preview](public/screenshot.png)
 ---
-
-![Dashboard Preview](screenshot.png)
 # Assignment Requirements Mapping
 
 ## Functional Requirements
