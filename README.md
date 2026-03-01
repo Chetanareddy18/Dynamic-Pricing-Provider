@@ -1,11 +1,19 @@
 <h1 align="center">Dynamic Pricing Dashboard</h1>
 
-## Frontend Internship Assignment Submission
+<p align="center">
+Frontend Internship Assignment Submission
+</p>
 
-A responsive pricing and subscription dashboard built using React and Vite.
+<p align="center">
+Responsive pricing and subscription dashboard built using React and Vite.
+</p>
 
-This project demonstrates dynamic state management, external JSON-based data handling, billing logic abstraction, currency conversion, and clean modular component architecture.
+<p align="center">
+ <a href="https://dynamic-pricing--provider.vercel.app/" target="_blank">Live Demo</a>
+</p>
+
 ![Dashboard Preview](public/screenshot.png)
+
 ---
 # Assignment Requirements Mapping
 
